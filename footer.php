@@ -45,6 +45,10 @@
 		})(document, 'script');
 	</script>
 	
+	<script type="text/javascript">
+		$.get('http://www.venturecafe.local/user_session', {}, function(data) {}, 'script');
+	</script>
+	
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which

@@ -585,6 +585,35 @@ landing.php
 	-webkit-border-bottom-right-radius: 20px;
 }
 
+#login_state {
+	padding: 0px;
+	width: 298px;
+	height: 125px;
+}
+
+#login_state a.login, #login_state .links_cont {
+	display: block;
+	padding: 10px 20px 15px 98px;
+}
+
+#login_state a.login, #login_state .links_cont ul {
+	text-decoration: none;
+	color: #dc9;
+}
+
+#login_state .links_cont ul {
+	list-style: disc inside;
+}
+
+#login_state .links_cont ul li {
+	padding-left: 0px;
+}
+
+#login_state a.login h3, #login_state .links_cont h3 {
+	text-decoration: underline;
+	color: #fff;
+}
+
 .block ul {
 	list-style: none;
 	margin: 0;
@@ -593,7 +622,7 @@ landing.php
 .block li {
 	max-height: 1.5em;
 	overflow: hidden;
-	padding-left: 30px;
+	padding-left: 35px;
 	position: relative;
 }
 

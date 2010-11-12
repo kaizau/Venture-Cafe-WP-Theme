@@ -47,18 +47,7 @@ get_header();
 	<?php } ?>
 	</section>
 	
-	<section class="block">
-		<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/login.png">
-	<?php if ( $options['right']['title'] && $options['right']['link'] ) { ?>
-		<h3><a href="<?php echo $options['right']['link']; ?>"><?php echo $options['right']['title']; ?></a></h3>
-	<?php } else { ?>
-		<h3><a href="<?php echo home_url(); ?>/sign-in">Connect to the Cafe</a></h3>
-	<?php } ?>
-	<?php if ( $options['right']['text'] ) { ?>
-		<p><?php echo $options['right']['text']; ?></p>
-	<?php } else { ?>
-		<p>Meet other members, share your knowledge, become part of the community!</p>
-	<?php } ?>
+	<section id="login_state" class="block">
 	</section>
 </div>
 

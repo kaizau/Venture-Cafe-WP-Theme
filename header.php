@@ -113,17 +113,17 @@ Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 					?>
 
 						<li class="slide">
-							<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/photos/<?php echo $slide; ?>.jpg">
+							<a href="<?php echo $options[$slide]['link'] ?>"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/photos/<?php echo $slide; ?>.jpg"></a>
 							<div class="right">
-							<?php if ( $options[$slide]['title'] ) { ?>
+							<!-- <?php if ( $options[$slide]['title'] ) { ?>
 								<h2><?php echo $options[$slide]['title']; ?></h2>
-							<?php } ?>
+							<?php } ?> -->
 							<?php if ( $options[$slide]['text'] ) { ?>
 								<h3><?php echo $options[$slide]['text']; ?></h3>
 							<?php } ?>
-							<?php if ( $options[$slide]['link'] ) { ?>
+							<!-- <?php if ( $options[$slide]['link'] ) { ?>
 								<p><a href="<?php echo $options[$slide]['link'] ?>">Learn more &raquo;</a></p>
-							<?php } ?>
+							<?php } ?> -->
 								
 							</div>
 						</li>
