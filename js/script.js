@@ -24,7 +24,7 @@ $(function(){
 	
 	$('#jqGallery').anythingSlider({
 		easing: 'easeInOutExpo',
-		delay: 6000,
+		delay: 10000,
 		animationTime: 1000,
 		buildNavigation:true,
 		navigationFormatter: formatText

@@ -81,16 +81,16 @@ Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 			
 			<aside class="details">
 				<ul>
-					<li class="location"><strong>Visit us:</strong><a href="http://goo.gl/maps/mBxs">1 Broadway Street, 4th floor, Cambridge, MA</a></li>
+					<li class="location"><strong>Visit us:</strong><a href="http://goo.gl/maps/2af6">One Broadway, 4th floor, Cambridge, MA</a></li>
 					<li>|</li>
 					<li class="phone"><strong>Call us:</strong>617.758.4128</li>
 					<li>|</li>
 					<li class="twitter"><a title="Twitter" href="http://twitter.com/venturecafe"><span></span></a></li>
-					<li class="facebook"><a title="Facebook" href="http://http://www.facebook.com/venture.cafe"><span></span></a></li>
+					<li class="facebook"><a title="Facebook" href="http://www.facebook.com/venture.cafe"><span></span></a></li>
 					<li class="linkedin"><a title="LinkedIn" href="http://www.linkedin.com/groups?gid=2590112"><span></span></a></li>
 					<li class="rss"><a title="RSS" href="<?php bloginfo('rss2_url'); ?>"><span></span></a></li>
 					<li class="email"><a title="Email" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#99;&#97;&#102;&#101;&#46;&#110;&#101;&#116;"><span></span></a>
-					<li class="calendar"><a title="Calendar" href=""><span></span></a></li>
+					<li class="calendar"><a title="Calendar" href="http://venturecafe.net/calendar"><span></span></a></li>
 				</ul>
 			</aside>
 		</div>
@@ -143,6 +143,9 @@ Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 					</ul>
 				</div>
 			</section>
+		<?php } elseif ( is_page() ) { ?>
+			<header id="blogHeader">
+			</header>
 		<?php } else { ?>
 			<header id="blogHeader">
 			<?php

@@ -152,7 +152,7 @@ li { margin: 0 0 .5em; }
 blockquote {
 	font-size: 16px;
 	font-style: italic;
-	padding: 5px 0 5px 40px;
+	padding: 10px 40px;
 }
 
 a {
@@ -162,6 +162,16 @@ a {
 a:hover {
 	text-decoration: none;
 	color: #f71;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 5px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 5px 20px;
 }
 
 /*******************************************************************************
@@ -334,7 +344,7 @@ GLOBAL
 /* Details */
 
 .details {
-	font-size: 11px;
+	font-size: 12px;
 	font-style: italic;
 	height: 20px;
 	line-height: 20px;
@@ -363,6 +373,11 @@ GLOBAL
 	height: 16px;
 	margin: 0;
 	width: 16px;
+}
+
+.details .phone span, .details .phone a {
+	background: none;
+	width: auto;
 }
 
 .details a {

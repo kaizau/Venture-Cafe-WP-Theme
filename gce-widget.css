@@ -1,0 +1,5 @@
+.gce-list, .gce-list ul { list-style: none; margin: 0;  }
+.gce-list p { margin: 0; }
+.gce-list-title { display: none; }
+.gce-list p.gce-list-event { font-weight: bold; margin-top: 10px; }
+.gce-list-event { background-color: transparent !important; }

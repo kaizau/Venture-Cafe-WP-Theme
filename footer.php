@@ -12,7 +12,7 @@
 ?>
 			<footer id="footer" class="group">
 				<span id="credits">Themed by <a href="http://yifeizhang.com" title="Yifei Zhang">Yifei Zhang</a></span>
-				<span id="copyright">Copyright &copy; 2010 The Venture Cafe</span>
+				<span id="copyright">Copyright &copy; 2011 The Venture Cafe</span>
 			</footer>
 
 		</div>
@@ -35,7 +35,7 @@
 	<![endif]-->
 	
 	<script>
-		var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+		var _gaq = [['_setAccount', 'UA-25239051-1'], ['_trackPageview']];
 		(function(d, t) {
 			var g = d.createElement(t),
 			s = d.getElementsByTagName(t)[0];
@@ -46,7 +46,7 @@
 	</script>
 	
 	<script type="text/javascript">
-		$.get('http://www.venturecafe.local/user_session', {}, function(data) {}, 'script');
+		$.get('http://www.venturecafe.net/app/user_session', {}, function(data) {}, 'script');
 	</script>
 	
 <?php
