@@ -7,7 +7,7 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */
- 
+
 get_header();
 ?>
 
@@ -32,7 +32,7 @@ get_header();
 		<?php endforeach; ?>
 		</ul>
 	</section>
-	
+
 	<section class="block">
 		<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/beer.png">
 	<?php if ( $options['middle']['title'] && $options['middle']['link'] ) { ?>
@@ -46,7 +46,7 @@ get_header();
 		<p>Plan office hours, organize a gathering, bring together interesting people!</p>
 	<?php } ?>
 	</section>
-	
+
 	<section id="login_state" class="block">
 	</section>
 </div>

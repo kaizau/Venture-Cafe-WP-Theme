@@ -16,7 +16,7 @@
 <!--[if IE 9 ]>		<html <?php language_attributes(); ?> class="no-js ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
-<!-- 
+<!--
 
 Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 
@@ -76,9 +76,9 @@ Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 					<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/venture130.png" alt="Venture Cafe" /><?php bloginfo( 'name' ); ?></a>
 				</<?php echo $heading_tag; ?>>
 			</header>
-			
+
 			<?php wp_nav_menu( array( 'container' => 'nav', 'container_id' => 'nav', 'menu_class' => 'menu group') ); ?>
-			
+
 			<aside class="details">
 				<ul>
 					<li class="location"><strong>Visit us:</strong><a href="http://goo.gl/maps/2af6">One Broadway, 4th floor, Cambridge, MA</a></li>
@@ -97,53 +97,13 @@ Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 	</div>
 
 	<div class="pageWrap">
-		
+
 		<div class="pageContainer group">
-		
-		<?php if ( is_front_page() ) { ?>
-			<section id="jqGallery" class="group row">
-				<div class="wrapper">
-					<ul class="group">
 
-					<?php
-						$options = get_option('vc_theme_options');
-						
-						for ( $slide = 1; $slide < 6; $slide++ ) {
-							if ( $options[$slide]['title'] || $options[$slide]['text'] || $options[$slide]['link'] ) {
-					?>
-
-						<li class="slide">
-							<a href="<?php echo $options[$slide]['link'] ?>"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/photos/<?php echo $slide; ?>.jpg"></a>
-							<div class="right">
-							<!-- <?php if ( $options[$slide]['title'] ) { ?>
-								<h2><?php echo $options[$slide]['title']; ?></h2>
-							<?php } ?> -->
-							<?php if ( $options[$slide]['text'] ) { ?>
-								<h3><?php echo $options[$slide]['text']; ?></h3>
-							<?php } ?>
-							<!-- <?php if ( $options[$slide]['link'] ) { ?>
-								<p><a href="<?php echo $options[$slide]['link'] ?>">Learn more &raquo;</a></p>
-							<?php } ?> -->
-								
-							</div>
-						</li>
-					<?php } 
-						}
-					?>
-					
-					<?php if ( ( $options[1]['title'] == '' ) && ( $options[1]['text'] == '' ) ) { ?>
-						<li class="slide">
-							<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/photos/1.jpg">
-							<div class="right">
-								<h3><q>The café serves as a nexus for helping innovators and entrepreneurs find one another and collaborate to bring their dreams to reality.</q></h3>
-							</div>
-						</li>
-					<?php } ?>
-					
-					</ul>
-				</div>
-			</section>
-		<?php } elseif ( is_page() ) { ?>
+		<?php if ( is_front_page() ) {
+      // TODO is there a better WP way to do this?
+			require('el/gallery.php');
+		} elseif ( is_page() ) { ?>
 			<header id="blogHeader">
 			</header>
 		<?php } else { ?>

@@ -1,4 +1,4 @@
-/*  
+/*
 Theme Name: Venture Cafe
 Theme URI: http://venturecafe.net/
 Description: The official Venture Cafe WordPress Theme
@@ -24,7 +24,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, figure, footer, header, 
+article, aside, figure, footer, header,
 hgroup, menu, nav, section, menu,
 time, mark, audio, video {
 	margin:0;
@@ -34,9 +34,9 @@ time, mark, audio, video {
 	font-size:100%;
 	vertical-align:baseline;
 	background:transparent;
-}                  
+}
 
-article, aside, figure, footer, header, 
+article, aside, figure, footer, header,
 hgroup, nav, section { display:block; }
 
 nav ul { list-style:none; }
@@ -54,12 +54,12 @@ a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:tra
 
 a:hover, a:active { outline: none; }
 
-/* Tables 
+/* Tables
    NOTE: still need cellspacing="0" in the markup */
 
 table { border-collapse:collapse; border-spacing:0; font-size:inherit; font-size:100%; }
 
-td, td img { vertical-align:top; } 
+td, td img { vertical-align:top; }
 
 /* Forms */
 
@@ -222,7 +222,7 @@ GLOBAL
 	border: 1px solid #331c0d;
 	border-top: 0;
 	height: 130px;
-	line-height: 1; 
+	line-height: 1;
 	margin: 0 10px;
 	overflow: hidden;
 	padding: 10px;
@@ -254,8 +254,8 @@ GLOBAL
 
 #topBar, #site-title, .block {
 	background: #5c3317;
-	background-image: -moz-linear-gradient(top, #5c3317, #412410); 
-	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #5c3317),color-stop(1, #412410)); 
+	background-image: -moz-linear-gradient(top, #5c3317, #412410);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #5c3317),color-stop(1, #412410));
 	-moz-box-shadow: 0 3px 10px rgba(0,0,0,.5);
 	-webkit-box-shadow: 0 3px 10px rgba(0,0,0,.5);
 	box-shadow: 0 3px 10px rgba(0,0,0,.5);
@@ -272,7 +272,7 @@ GLOBAL
 /* Nav */
 
 #nav ul {
-	border-left: 1px solid #331c0d; 
+	border-left: 1px solid #331c0d;
 	margin-left: 180px;
 }
 
@@ -283,13 +283,13 @@ GLOBAL
 }
 
 #nav a {
-	border-right: 1px solid #331c0d; 
+	border-right: 1px solid #331c0d;
 	color: #fff;
 	display: inline-block;
 	font-family: georgia, 'times new roman', times, serif;
 	line-height: 20px;
 	padding: 20px;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 #nav a:hover, #nav a.open, .current-menu-item, .current_page_parent {
@@ -469,8 +469,16 @@ GLOBAL
 landing.php
 *******************************************************************************/
 
+/*
+TODO CSS for the calltoaction
+*/
+
+#callToAction {
+  padding-left: 200px;
+}
+
 /* Gallery
-    Modified anythingSlider v1.3    
+    Modified anythingSlider v1.3
     Based on CSS by Chris Coyier: http://css-tricks.com
 */
 
@@ -528,7 +536,7 @@ landing.php
 	text-decoration: none;
 }
 
-.thumbNav a:hover, 
+.thumbNav a:hover,
 .thumbNav a.cur {
 	color: #f71;
 }
@@ -563,7 +571,7 @@ landing.php
 	width: 240px;
 }
 
-.slide h2 { 
+.slide h2 {
 	font-size: 40px;
 	margin-bottom: 20px;
 }
