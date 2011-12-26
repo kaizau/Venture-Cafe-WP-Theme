@@ -1,0 +1,213 @@
+/*******************************************************************************
+landing.php
+*******************************************************************************/
+
+/* Gallery
+    Modified anythingSlider v1.3
+    Based on CSS by Chris Coyier: http://css-tricks.com
+*/
+
+#jqGallery {
+	line-height: 0;
+	position: relative;
+}
+
+#jqGallery .wrapper {
+	border: 10px solid #000;
+	border: 10px solid rgba(0,0,0,.5);
+	height: 400px;
+	overflow: hidden;
+	width: 940px;
+}
+
+#jqGallery .wrapper ul {
+	width: 9400px;
+	list-style: none;
+	margin: 0;
+}
+
+#jqGallery .wrapper ul li {
+	display: block;
+	float: left;
+	padding: 0;
+	height: 400px;
+	width: 940px;
+	margin: 0;
+}
+
+.thumbNav {
+	bottom: 20px;
+	height: 15px;
+	line-height: 15px;
+	position: absolute;
+	right: 20px;
+	z-index: 10;
+}
+
+.thumbNav ul {
+	list-style: none;
+}
+
+.thumbNav li {
+	display: inline;
+}
+
+.thumbNav a {
+	color: #77411e;
+	font-size: 30px;
+	margin: 0 3px;
+	outline: none;
+	text-decoration: none;
+}
+
+.thumbNav a:hover,
+.thumbNav a.cur {
+	color: #f71;
+}
+
+#jqGallery .wrapper ul ul { position: static; margin: 0; background: none; overflow: visible; width: auto; border: 0; }
+#jqGallery .wrapper ul ul li { float: none; height: auto; width: auto; background: none; }
+#jqGallery .arrow, #jqGallery .start-stop { display: none; }
+
+/* Call to Action */
+
+#callToAction {
+  background: #900;
+  border: 1px solid #400;
+  padding: 10px 20px 10px 40px;
+  position: absolute;
+  right: -5px;
+  top: 30px;
+  width: 280px;
+  z-index: 200;
+}
+
+#callToAction h2 {
+  font-size: 16px;
+}
+
+/* Gallery Slides */
+
+.slide {
+	position: relative;
+	overflow: hidden;
+}
+
+.slide .right {
+	background-color: #111;
+	color: #fff;
+	height: 400px;
+	line-height: 1.5;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 0;
+	width: 290px;
+	z-index: 5;
+}
+
+.slide h3 {
+  bottom: 60px;
+	font-size: 20px;
+  position: absolute;
+  right: 20px;
+  width: 240px;
+}
+
+.slide q:before {
+	content: '\201C';
+	font-size: 150%;
+	line-height: .666;
+	margin-right: 3px;
+}
+
+.slide q:after {
+	content: '\201D';
+	font-size: 150%;
+	line-height: .666;
+	margin-right: -12px;
+}
+
+/* Blocks */
+
+.block {
+	border: 1px solid #331c0d;
+	float: left;
+	font-size: 12px;
+	height: 100px;
+	margin: 0 10px;
+	overflow: hidden;
+	padding: 10px 20px 15px 98px;
+	position: relative;
+	width: 180px;
+  @include border-top-left-radius(20px);
+	@include border-bottom-right-radius(20px);
+}
+
+#login_state {
+	padding: 0px;
+	width: 298px;
+	height: 125px;
+}
+
+#login_state a.login, #login_state .links_cont {
+	display: block;
+	padding: 10px 20px 15px 98px;
+}
+
+#login_state a.login, #login_state .links_cont ul {
+	text-decoration: none;
+	color: #dc9;
+}
+
+#login_state .links_cont ul {
+	list-style: disc inside;
+}
+
+#login_state .links_cont ul li {
+	padding-left: 0px;
+}
+
+#login_state a.login h3, #login_state .links_cont h3 {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.block ul {
+	list-style: none;
+	margin: 0;
+}
+
+.block li {
+	max-height: 1.5em;
+	overflow: hidden;
+	padding-left: 35px;
+	position: relative;
+}
+
+.block li em {
+	left: 0;
+	position: absolute;
+}
+
+.block h3 {
+	line-height: 30px;
+	margin-bottom: 5px;
+}
+
+.block img {
+	left: 10px;
+	opacity: .65;
+	position: absolute;
+	top: 25px;
+}
+
+.block:hover {
+	bottom: 2px;
+	color: #fff;
+  @include box-shadow( 0 5px 10px rgba(0,0,0,.5) );
+}
+
+.block:hover img {
+	opacity: 1;
+}

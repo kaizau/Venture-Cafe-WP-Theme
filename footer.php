@@ -17,23 +17,23 @@
 
 		</div>
 	</div>
-	
+
 	<!-- JavaScript -->
-	
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
+	<script>!window.jQuery && document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.4.2.min.js"><\/script>')</script>
 	<script src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.anythingslider.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.easing.1.2.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/script.js"></script>
-	
+
 	<!--[if lt IE 7 ]>
 		<script src="<?php bloginfo('stylesheet_directory'); ?>/js/DD_belatedPNG_0.0.8a-min.js"></script>
 		<script>
 			DD_belatedPNG.fix('.block img, .details span');
 		</script>
 	<![endif]-->
-	
+
 	<script>
 		var _gaq = [['_setAccount', 'UA-25239051-1'], ['_trackPageview']];
 		(function(d, t) {
@@ -44,11 +44,11 @@
 			s.parentNode.insertBefore(g, s);
 		})(document, 'script');
 	</script>
-	
+
 	<script type="text/javascript">
 		$.get('http://www.venturecafe.net/app/user_session', {}, function(data) {}, 'script');
 	</script>
-	
+
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which

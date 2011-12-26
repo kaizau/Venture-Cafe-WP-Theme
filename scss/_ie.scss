@@ -1,0 +1,32 @@
+/*******************************************************************************
+IE FIXES
+*******************************************************************************/
+
+.ie .group, /* Clearfix */
+.ie #topBar,
+.ie #nav,
+.ie header,
+.ie #jqGallery { zoom: 1; }
+
+.ie6 .block {
+	margin: 0 20px 0 0;
+}
+
+.ie6 .block li em {
+	left: -30px;
+}
+
+.ie6 #jqGallery .wrapper,
+.ie7 #jqGallery .wrapper {
+	border: 0;
+}
+
+.ie6 #jqGallery,
+.ie7 #jqGallery {
+	margin-top: 40px;
+	width: 940px;
+}
+
+.ie6 #nav {
+	height: 60px;
+}

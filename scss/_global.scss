@@ -1,0 +1,343 @@
+/*******************************************************************************
+TYPOGRAPHY & COMMON CLASSES
+*******************************************************************************/
+
+body {
+	background: #331c0d url(img/stripes.png) repeat-x top left;
+	color: #dc9;
+	font-family: 'helvetica neue', 'segoe ui', helvetica, arial, sans-serif;
+	font-size: 13px;
+	height: 100%;
+	line-height: 1.5;
+	text-shadow: 0px 1px #000;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: georgia, 'times new roman', times, serif;
+	font-weight: normal;
+	line-height: 1.25;
+	margin-bottom: 0;
+}
+
+h1 { font-size: 30px; }
+h2 { font-size: 30px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 12px; }
+
+p, ul, ol, pre, blockquote {
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+ul, ol {
+	list-style: outside;
+	margin-left: 40px;
+}
+
+ul ul, ul ol,
+ol ol, ol ul {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+li { margin: 0 0 .5em; }
+
+blockquote {
+	font-size: 16px;
+	font-style: italic;
+	padding: 10px 40px;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #f71;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 5px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 5px 20px;
+}
+
+/*******************************************************************************
+GLOBAL
+*******************************************************************************/
+
+.pageWrap {
+	margin: 0 auto;
+	position: relative;
+	width: 1000px;
+}
+
+.pageContainer {
+	padding: 0 20px;
+	position: relative;
+}
+
+.row {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.padded {
+	padding: 20px;
+}
+
+.hoverfx:hover {
+	background: rgba(0,0,0,.1);
+}
+
+/* Header */
+
+#topBar {
+	border-top: 1px solid #331c0d;
+	border-bottom: 1px solid #331c0d;
+	height: 60px;
+	margin: 30px 0 20px;
+	position: relative;
+}
+
+#header {
+	position: relative;
+	left: 0;
+	top: -30px;
+}
+
+#site-title {
+	border: 1px solid #331c0d;
+	border-top: 0;
+	height: 130px;
+	line-height: 1;
+	margin: 0 10px;
+	overflow: hidden;
+	padding: 10px;
+	position: absolute;
+	text-indent: -999px;
+	top: 0;
+	width: 130px;
+	z-index: 100;
+	@include border-bottom-left-radius(75px);
+}
+
+#site-title img {
+	left: 0;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+}
+
+#site-title:hover {
+	height: 132px;
+}
+
+#site-title:hover img {
+	top: 2px;
+}
+
+#topBar, #site-title, .block {
+	background: #5c3317;
+  @include background-image( linear-gradient(#5c3317, #412410) );
+	@include box-shadow( 0 3px 10px rgba(0,0,0,.5) );
+}
+
+#topBar a {
+	outline: 0;
+}
+
+/* Nav */
+
+#nav ul {
+	border-left: 1px solid #331c0d;
+	margin-left: 180px;
+}
+
+#nav li {
+	float: left;
+	margin: 0;
+	position: relative;
+}
+
+#nav a {
+	border-right: 1px solid #331c0d;
+	color: #fff;
+	display: inline-block;
+	font-family: georgia, 'times new roman', times, serif;
+	line-height: 20px;
+	padding: 20px;
+	text-decoration: none;
+}
+
+// TODO fix this
+#nav li:hover, .current-menu-item, .current_page_parent {
+	background-color: #ce773e;
+  @include background( radial-gradient( 50% 10%, darken(#ce773e,10%), #4e2b14 ) no-repeat );
+}
+
+.js #nav .sub-menu {
+	display: none;
+}
+
+#nav .sub-menu {
+	border: 1px solid #180d06;
+	border-bottom: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	top: 60px;
+	z-index: 200;
+	@include box-shadow( 0 5px 10px rgba(0,0,0,.5) );
+}
+
+#nav .sub-menu li {
+	border: 0;
+	margin: 0;
+}
+
+#nav .sub-menu a {
+	background: #4e2b14;
+	border-bottom: 1px solid #180d06;
+	font-family: 'segoe ui', 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	padding: 5px 20px;
+	text-transform: uppercase;
+	width: 200px;
+}
+
+#nav .sub-menu a:hover {
+	color: #f71;
+}
+
+#nav .arrow {
+	font-size: 16px;
+	line-height: 10px;
+}
+
+
+/* Details */
+
+.details {
+	font-size: 12px;
+	font-style: italic;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	top: -20px;
+	right: 20px;
+}
+
+.details li {
+	display: block;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	list-style: none;
+	margin: 0 5px 0 0;
+}
+
+.details strong {
+	margin-right: 5px;
+}
+
+.details span {
+	background: url(img/icons20.png) no-repeat 0 0;
+	cursor: pointer;
+	display: inline-block;
+	height: 16px;
+	margin: 0;
+	width: 16px;
+}
+
+.details .phone span, .details .phone a {
+	background: none;
+	width: auto;
+}
+
+.details a {
+	text-decoration: none;
+}
+
+.details a span {
+	position: relative;
+}
+
+.twitter span {
+	background-position: 0 0;
+}
+
+.facebook span {
+	background-position: 0 -20px;
+}
+
+.linkedin span {
+	background-position: 0 -40px;
+}
+
+.rss span {
+	background-position: 0 -60px;
+}
+
+.email span {
+	background-position: 0 -80px;
+}
+
+.calendar span {
+	background-position: 0 -100px;
+}
+
+.details a:hover span {
+	bottom: 2px;
+}
+
+.details a span, .block, .block img, #site-title:hover, #site-title:hover img, .hoverfx {
+	@include transition(all .2s ease-in-out);
+}
+
+
+/* Footer */
+
+#footer {
+	border-top: 1px solid #dc9;
+	clear: both;
+	font-size: 11px;
+	padding: 19px 0 5px;
+}
+
+#credits {
+	float: right;
+}
+
+/* Secret */
+
+.secret {
+	background: #000 url(img/secret.jpg) repeat center top;
+}
+
+#jqBack {
+	background: #fff;
+	color: red;
+	display: block;
+	font-family: 'Comic Sans MS', sans-serif;
+	font-size: 200%;
+	font-weight: bold;
+	left: 20px;
+	padding: 5px 15px 7px;
+	position: fixed;
+	text-decoration: none;
+	top: 20px;
+	@include border-radius(20px);
+	text-shadow: none;
+}
+
+#jqBack:hover {
+	color: blue;
+}
