@@ -5,7 +5,7 @@ TYPOGRAPHY & COMMON CLASSES
 body {
 	background: #331c0d url(img/stripes.png) repeat-x top left;
 	color: #dc9;
-	font-family: 'helvetica neue', 'segoe ui', helvetica, arial, sans-serif;
+	font-family: 'helvetica neue', 'segoe ui', arial, sans-serif;
 	font-size: 13px;
 	height: 100%;
 	line-height: 1.5;
@@ -125,7 +125,7 @@ GLOBAL
 	top: 0;
 	width: 130px;
 	z-index: 100;
-	@include border-bottom-left-radius(75px);
+	@include border-bottom-radius(75px);
 }
 
 #site-title img {

@@ -20,8 +20,8 @@
 
 	<!-- JavaScript -->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script>!window.jQuery && document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.4.2.min.js"><\/script>')</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.7.min.js"><\/script>')</script>
 	<script src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.anythingslider.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.easing.1.2.js"></script>

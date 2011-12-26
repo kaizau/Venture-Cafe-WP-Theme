@@ -32,6 +32,7 @@
           <h3><q>The café serves as a nexus for helping innovators and entrepreneurs find one another and collaborate to bring their dreams to reality.</q></h3>
         </div>
       </li>
+    <?php // TODO delete me! ?>
       <li class="slide">
         <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/photos/2.jpg">
         <div class="right">
