@@ -1,6 +1,13 @@
 <section id="jqGallery" class="group row">
   <div id="callToAction">
     <h2>Connecting people: entrepreneurial, innovative, creative - Thursdays from 3-8 pm</h2>
+		<?php
+      // TODO fetch only posts for "this week"
+			global $post;
+			$thisweek = get_posts('numberposts=1');
+      $thisweek = $thisweek[0]->ID;
+		?>
+      <a href="<?php the_permalink($thisweek); ?>"><?php the_date('m/j', '<em>', '</em>'); the_title($thisweek); ?></a>
   </div>
 
   <div class="wrapper">

@@ -23,6 +23,7 @@ get_header();
 	<?php } ?>
 		<ul>
 		<?php
+      // TODO fetch only posts for "this week"
 			global $post;
 			$myposts = get_posts('numberposts=2');
 			foreach($myposts as $post) :

@@ -176,7 +176,6 @@ GLOBAL
 	text-decoration: none;
 }
 
-// TODO fix this
 #nav li:hover, .current-menu-item, .current_page_parent {
 	background-color: #ce773e;
   @include background( radial-gradient( 50% 10%, darken(#ce773e,10%), #4e2b14 ) no-repeat );

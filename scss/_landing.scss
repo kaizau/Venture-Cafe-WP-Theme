@@ -76,7 +76,6 @@ landing.php
   @include background( linear-gradient(#900, #600) );
   border: 1px solid #400;
   color: #fff;
-  padding: 15px 20px;
   position: absolute;
   overflow: visible !important;
   right: -10px;
@@ -104,11 +103,21 @@ landing.php
     width: 0;
     z-index: 250;
   }
-}
 
-#callToAction h2 {
-  font-size: 16px;
-	// font-family: 'helvetica neue', 'segoe ui', arial, sans-serif;
+  h2 {
+    font-size: 16px;
+    padding: 15px 20px;
+    width: 200px;
+    @include float-left;
+  }
+
+  a {
+    border-left: 1px solid #400;
+    display: block;
+    overflow: hidden;
+    padding: 15px 20px;
+    @include box-shadow(inset 1px 0 0 rgba(255,255,255,.25) );
+  }
 }
 
 /* Gallery Slides */
