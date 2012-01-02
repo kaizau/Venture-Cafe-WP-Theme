@@ -11,7 +11,7 @@
  */
 ?>
 			<footer id="footer" class="group">
-				<span id="credits">Themed by <a href="http://yifeizhang.com" title="Yifei Zhang">Yifei Zhang</a></span>
+				<span id="credits">Designed by <a href="http://yifei.co" title="Yifei Zhang">Yifei Zhang</a></span>
 				<span id="copyright">Copyright &copy; 2011 The Venture Cafe</span>
 			</footer>
 
