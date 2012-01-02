@@ -101,7 +101,6 @@ Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 		<div class="pageContainer group">
 
 		<?php if ( is_front_page() ) {
-      // TODO is there a better WP way to do this?
 			require('el/gallery.php');
 		} elseif ( is_page() ) { ?>
 			<header id="blogHeader">

@@ -8,6 +8,9 @@
  * @since Twenty Ten 1.0
  */
 
+$options = get_option('vc_theme_options');
+$myposts = get_posts(array('numberposts'=>2,'category_name'=>'this-week-in-the-cafe'));
+
 get_header();
 ?>
 
@@ -15,22 +18,20 @@ get_header();
 	<section class="block">
 		<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/cal.png">
 	<?php
-		$options = get_option('vc_theme_options');
 		if ( $options['left']['title'] ) { ?>
 		<h3><a href="<?php echo home_url(); ?>/blog"><?php echo $options['left']['title']; ?></a></h3>
 	<?php } else { ?>
 		<h3><a href="<?php echo home_url(); ?>/blog">Stay Informed</a></h3>
 	<?php } ?>
 		<ul>
-		<?php
-      // TODO fetch only posts for "this week"
-			global $post;
-			$myposts = get_posts('numberposts=2');
-			foreach($myposts as $post) :
-			setup_postdata($post);
-		?>
-		<li><a href="<?php the_permalink(); ?>"><?php the_date('m/j', '<em>', '</em>'); the_title(); ?></a></li>
-		<?php endforeach; ?>
+      <?php foreach ($myposts as $post) { ?>
+        <li>
+          <a href="<?php echo get_permalink($post->ID); ?>">
+            <em><?php echo get_date_from_gmt($post->post_date_gmt, 'm/j'); ?></em>
+            <?php echo get_the_title($post->ID); ?>
+          </a>
+        </li>
+      <?php } ?>
 		</ul>
 	</section>
 

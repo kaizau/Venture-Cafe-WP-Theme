@@ -71,52 +71,33 @@ landing.php
 
 /* Call to Action */
 
+$red: #800;
+
 #callToAction {
-  background: #900;
-  @include background( linear-gradient(#900, #600) );
-  border: 1px solid #400;
+  background: $red;
+  @include background( linear-gradient(lighten($red,5%),darken($red,5%)) );
+  border: 1px solid #000;
   color: #fff;
+  display: block;
+  padding: 10px 20px;
   position: absolute;
-  overflow: visible !important;
-  right: -10px;
-  top: 30px;
-  width: 400px;
-  z-index: 200;
-  @include border-top-right-radius(3px);
-  @include border-left-radius(5px);
-  @include box-shadow(
-    0px 2px 5px 2px rgba(0,0,0,.5),
-    inset 1px 1px 0 rgba(255,255,255,.25)
-  );
+  right: 40px;
+  text-decoration: none !important;
+  top: -20px;
+  z-index: 30;
+  @include box-shadow(0 2px 3px 1px rgba(0,0,0,.5));
+  @include border-bottom-radius(8px);
+  @include text-shadow(0 -1px 0 #000);
 
-  &:after {
-    border-top: 5px solid #500;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid #500;
-    bottom: -11px;
-    content: '';
-    display: block;
-    height: 0;
-    position: absolute;
-    right: -1px;
-    width: 0;
-    z-index: 250;
+  &:hover {
+    padding-top: 12px;
   }
 
-  h2 {
-    font-size: 16px;
-    padding: 15px 20px;
-    width: 200px;
-    @include float-left;
-  }
-
-  a {
-    border-left: 1px solid #400;
-    display: block;
-    overflow: hidden;
-    padding: 15px 20px;
-    @include box-shadow(inset 1px 0 0 rgba(255,255,255,.25) );
+  span {
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 20px;
+    text-transform: uppercase;
   }
 }
 
@@ -141,10 +122,8 @@ landing.php
 }
 
 .slide h3 {
-  bottom: 60px;
-	font-size: 20px;
-  position: absolute;
-  right: 20px;
+	font-size: 24px;
+  margin: 50px 20px;
   width: 240px;
 }
 

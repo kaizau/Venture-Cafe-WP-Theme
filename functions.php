@@ -1,6 +1,6 @@
 <?php
 
-// Redefines twentyten_setup to exclude custom header & background support 
+// Redefines twentyten_setup to exclude custom header & background support
 function twentyten_setup() {
 	add_editor_style();
 	add_theme_support( 'post-thumbnails' );
@@ -15,6 +15,21 @@ function twentyten_setup() {
 	) );
 }
 
+// Debug
+// TODO comment me out for production!
+if ( !function_exists('debug') ) {
+  function debug($var, $exit = false) {
+    echo "\n<pre>";
+    if (is_array($var) || is_object($var))
+      echo htmlentities(print_r($var, true));
+    elseif (is_string($var))
+      echo 'string(' . strlen($var) . ') "' . htmlentities($var) . '"';
+    else
+      var_dump($var);
+    echo "</pre>\n";
+    if ($exit) exit;
+  }
+}
 
 // Theme options definitions
 add_action( 'admin_init', 'theme_options_init' );
@@ -95,103 +110,103 @@ function theme_options_do_page() {
 		<?php if ( false !== $_REQUEST['updated'] ) : ?>
 		<div class="updated fade"><p><strong><?php _e( 'Options saved' ); ?></strong></p></div>
 		<?php endif; ?>
-		
+
 		<p>For links, copy & paste the full URL (i.e. http://venturecafe.net) to ensure that everything works correctly.</p>
-		
+
 		<form method="post" action="options.php">
 			<?php settings_fields( 'vc_options' ); ?>
 			<?php $options = get_option( 'vc_theme_options' ); ?>
-			
+
 			<table class="form-table">
-				
+
 				<tr valign="top"><th scope="row" colspan="2"><h2><?php _e( 'Bottom Boxes' ); ?></h2></th></tr>
-				
+
 				<tr valign="top"><th scope="row" colspan="2"><h3><?php _e( 'Left Box (blog feed)' ); ?></h3></th></tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Title' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[left][title]" value="<?php esc_attr_e( $options['left']['title'] ); ?>" />
 						<label><?php _e( 'Defaults to "Fresh Brewed Blog"' ); ?></label>
 					</td>
 				</tr>
-				
+
 				<tr valign="top"><th scope="row" colspan="2"><h3><?php _e( 'Middle Box' ); ?></h3></th></tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Title' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[middle][title]" value="<?php esc_attr_e( $options['middle']['title'] ); ?>" />
 						<label><?php _e( 'Large heading. Make it short and catchy!' ); ?></label>
 					</td>
 				</tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Title Link *' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[middle][link]" value="<?php esc_attr_e( $options[middle][link] ); ?>" />
 						<label><?php _e( '* REQUIRED when you also change the Title.' ); ?></label>
 					</td>
 				</tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Text' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[middle][text]" value="<?php esc_attr_e( $options[middle][text] ); ?>" />
 						<label><?php _e( 'Supporting copy. Give a bit more detail.' ); ?></label>
 					</td>
 				</tr>
-				
-				
-				
+
+
+
 				<tr valign="top"><th scope="row" colspan="2"><h3><?php _e( 'Right Box' ); ?></h3></th></tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Title' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[right][title]" value="<?php esc_attr_e( $options[right][title] ); ?>" />
 					</td>
 				</tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Title Link *' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[right][link]" value="<?php esc_attr_e( $options[right][link] ); ?>" />
 					</td>
 				</tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Text' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[right][text]" value="<?php esc_attr_e( $options[right][text] ); ?>" />
 					</td>
 				</tr>
-			
+
 				<tr valign="top"><th scope="row" colspan="2"><h2><?php _e( 'Landing Page Slider' ); ?></h2><span><?php _e( 'If left blank, defaults to "1.jpg" and "Welcome!"' ); ?></span></th></tr>
-			
+
 		<?php for ( $n = 1; $n < 6; $n++ ) { ?>
-			
+
 				<tr valign="top"><th scope="row"><h3><?php _e( 'Slide ' . $n ); ?></h3></th></tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Title' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[<?php echo $n; ?>][title]" value="<?php esc_attr_e( $options[$n][title] ); ?>" />
 					</td>
 				</tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Text' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[<?php echo $n; ?>][text]" value="<?php esc_attr_e( $options[$n][text] ); ?>" />
 					</td>
 				</tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Link' ); ?></th>
 					<td>
 						<input class="regular-text" type="text" name="vc_theme_options[<?php echo $n; ?>][link]" value="<?php esc_attr_e( $options[$n][link] ); ?>" />
 					</td>
 				</tr>
-				
+
 				<tr valign="top"><th scope="row"><?php _e( 'Image' ); ?></th>
 					<td>
 						<span>Upload/rename your image to /wp-content/themes/vcafe/img/photos/<strong><?php echo $n ; ?>.jpg</strong></span>
 					</td>
 				</tr>
-		
+
 		<?php } ?>
-		
+
 			</table>
 
 			<p class="submit">
@@ -228,7 +243,7 @@ function theme_options_validate( $input ) {
 
 	// Say our textarea option must be safe text with the allowed tags for posts
 	$input['sometextarea'] = wp_filter_post_kses( $input['sometextarea'] );
-	
+
 	return $input;
 }
 
