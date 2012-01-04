@@ -57,7 +57,6 @@ landing.php
 	font-size: 30px;
 	margin: 0 3px;
 	outline: none;
-	text-decoration: none;
 }
 
 .thumbNav a:hover,
@@ -82,7 +81,6 @@ $red: #800;
   padding: 10px 20px;
   position: absolute;
   right: 40px;
-  text-decoration: none !important;
   top: -20px;
   z-index: 30;
   @include box-shadow(0 2px 3px 1px rgba(0,0,0,.5));
@@ -169,7 +167,6 @@ $red: #800;
 }
 
 #login_state a.login, #login_state .links_cont ul {
-	text-decoration: none;
 	color: #dc9;
 }
 
@@ -182,7 +179,6 @@ $red: #800;
 }
 
 #login_state a.login h3, #login_state .links_cont h3 {
-	text-decoration: underline;
 	color: #fff;
 }
 

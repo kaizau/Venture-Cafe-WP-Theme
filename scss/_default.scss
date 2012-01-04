@@ -13,7 +13,6 @@ index.php
 
 #blogHeader a, .entry-title a {
 	color: #dc9;
-	text-decoration: none;
 }
 
 #blogHeader a:hover, .entry-title a:hover {
@@ -66,13 +65,8 @@ index.php
 	margin-bottom: 20px;
 }
 
-.entry-meta a {
-	text-decoration: none;
-}
-
 .entry-meta .entry-date, .entry-meta .author a {
 	font-style: normal;
-	text-decoration: none;
 	text-transform: uppercase;
 }
 
@@ -215,7 +209,6 @@ index.php
 	background: #412410;
 	display: inline-block;
 	padding: 4px 20px;
-	text-decoration: none;
 	@include border-radius(15px);
   @include transition( all .2s ease-in-out );
 }

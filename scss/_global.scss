@@ -53,10 +53,10 @@ blockquote {
 
 a {
 	color: #fff;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: none;
 	color: #f71;
 }
 
@@ -175,7 +175,6 @@ GLOBAL
 	font-family: georgia, 'times new roman', times, serif;
 	line-height: 20px;
 	padding: 20px;
-	text-decoration: none;
 }
 
 #nav li:hover, .current-menu-item, .current_page_parent {
@@ -263,10 +262,6 @@ GLOBAL
 	width: auto;
 }
 
-.details a {
-	text-decoration: none;
-}
-
 .details a span {
 	position: relative;
 }
@@ -333,7 +328,6 @@ GLOBAL
 	left: 20px;
 	padding: 5px 15px 7px;
 	position: fixed;
-	text-decoration: none;
 	top: 20px;
 	@include border-radius(20px);
 	text-shadow: none;
